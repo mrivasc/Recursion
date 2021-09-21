@@ -14,12 +14,19 @@ int recCount(int n, int i);
 
 int main()
 {
-	int n = 0, i = 1;
+	int n=0, i=1; bool f=true;
 
-	cout << "Ingrese un numero entero: ";
-	cin >> n;
+	while(f){
+		cout << "Ingrese un numero entero: ";
+		cin >> n;
 
-	recCount(n, i);
+		if(n>0){
+			recCount(n, i);
+			break;
+		}
+		else
+			cout << "El numero ingresado no es valido.\n\n";
+	}
 }
 
 int recCount(int n, int i)
